@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var web: UIWebView!
     
+    @IBOutlet weak var label: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     // URL paths including the ESP8266's IP address and arguments
-    var led1on_URL = "http://192.168.0.107/setleds?led1=ON"
+    var led1on_URL = "http://192.168.3.106/setleds?led1=ON&led2=OFF"
     // IBAction connected to the "LED1 ON" button
     @IBAction func led1on(sender: AnyObject) {
         // Instantiate an NSURL object using the
@@ -35,6 +37,8 @@ class ViewController: UIViewController {
         // Use the webview to send the request to the
         // request NSURLRequest
         web.loadRequest(request)
+        
+        label.tintColor("red");
     }
 
 }

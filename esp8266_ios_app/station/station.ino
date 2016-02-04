@@ -26,8 +26,8 @@
 #include <ESP8266WebServer.h>
 
 // Define the ID and password of your Wi-Fi network
-const char* ssid = "BEARBEAR";
-const char* password = "isachinesebear";
+const char* ssid = "AcroboticGuest";
+const char* password = "13meetup37";
 
 // Instantiate the ESP8266WebServer class, passing the argument 80 for the
 // port that the server will be listening.
